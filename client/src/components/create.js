@@ -5,6 +5,7 @@ export default function Create() {
    name: "",
    position: "",
    level: "",
+   records: [],
  });
  const navigate = useNavigate();
   // These methods will update the state properties.
@@ -29,7 +30,7 @@ export default function Create() {
      window.alert(error);
      return;
    });
-    setForm({ name: "", position: "", level: "" });
+   setForm({ name: "", position: "", level: "" });
    navigate("/");
  }
   // This following section will display the form that takes the input from the user.
@@ -48,7 +49,7 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="position">Position</label>
+         <label htmlFor="position">Position: </label>
          <input
            type="text"
            className="form-control"
